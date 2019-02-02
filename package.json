@@ -1,0 +1,39 @@
+{
+  "name": "mutation-snapshooter",
+  "version": "0.0.1",
+  "description": "Snapshot testing library for Vuex mutations",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shisama/mutation-snapshooter.git"
+  },
+  "keywords": [
+    "vue",
+    "vuex",
+    "test",
+    "snapshot",
+    "mutation",
+    "mutations"
+  ],
+  "author": "Masashi Hirano (shisama)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shisama/mutation-snapshooter/issues"
+  },
+  "homepage": "https://github.com/shisama/mutation-snapshooter#readme",
+  "devDependencies": {
+    "@typescript-eslint/parser": "^1.2.0",
+    "@vue/test-utils": "^1.0.0-beta.28",
+    "jest": "^24.0.0",
+    "prettier": "^1.16.3",
+    "rollup": "^1.1.2",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.3.1",
+    "vue": "^2.5.22",
+    "vue-jest": "^3.0.2",
+    "vuex": "^3.1.0"
+  }
+}
