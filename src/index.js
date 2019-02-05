@@ -1,4 +1,5 @@
 const diff = require('snapshot-diff');
+const cloneDeep = require('lodash.clonedeep');
 
 module.exports = (state, mutations) => {
   for (const key of Object.keys(mutations)) {
@@ -7,8 +8,8 @@ module.exports = (state, mutations) => {
       if (typeof mutation !== 'function') {
         throw new Error(`${key} is not a function.`);
       }
-      const initialState = Object.assign({}, state);
-      const mutableState = Object.assign({}, state);
+      const initialState = cloneDeep(state);
+      const mutableState = cloneDeep(state);
       mutation(mutableState);
       expect(diff(initialState, mutableState)).toMatchSnapshot();
     })

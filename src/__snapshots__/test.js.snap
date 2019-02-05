@@ -6,8 +6,10 @@ exports[`decrement 1`] = `
 + Second value
 
   Object {
--   \\"count\\": 0,
-+   \\"count\\": -1,
+    \\"counter\\": Object {
+-     \\"value\\": 0,
++     \\"value\\": -1,
+    },
   }"
 `;
 
@@ -17,7 +19,9 @@ exports[`increment 1`] = `
 + Second value
 
   Object {
--   \\"count\\": 0,
-+   \\"count\\": 1,
+    \\"counter\\": Object {
+-     \\"value\\": 0,
++     \\"value\\": 1,
+    },
   }"
 `;

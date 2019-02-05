@@ -5,12 +5,14 @@ const mutationsSnapshooter = require('.');
 Vue.use(Vuex);
 
 const state = {
-  count: 0
+  counter: {
+    value: 0
+  }
 }
 
 const mutations = {
-  increment: state => state.count++,
-  decrement: state => state.count--
+  increment: state => state.counter.value++,
+  decrement: state => state.counter.value--
 }
 
 const actions = {
