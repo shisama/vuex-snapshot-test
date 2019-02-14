@@ -1,18 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`decrement 1`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-  Object {
-    \\"counter\\": Object {
--     \\"value\\": 0,
-+     \\"value\\": -1,
-    },
-  }"
-`;
-
 exports[`increment 1`] = `
 "Snapshot Diff:
 - First value
@@ -20,8 +7,21 @@ exports[`increment 1`] = `
 
   Object {
     \\"counter\\": Object {
--     \\"value\\": 0,
-+     \\"value\\": 1,
+-     \\"value\\": 1,
++     \\"value\\": 2,
+    },
+  }"
+`;
+
+exports[`multiple 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+  Object {
+    \\"counter\\": Object {
+-     \\"value\\": 1,
++     \\"value\\": 5,
     },
   }"
 `;

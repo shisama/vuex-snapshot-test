@@ -1,18 +1,19 @@
 const Vue = require('vue');
 const Vuex = require('vuex');
-const mutationsSnapshooter = require('.');
+const tester = require('.');
 
 Vue.use(Vuex);
 
 const state = {
   counter: {
-    value: 0
+    value: 1
   }
 }
 
 const mutations = {
   increment: state => state.counter.value++,
-  decrement: state => state.counter.value--
+  decrement: state => state.counter.value--,
+  multiple: (state, payload) => state.counter.value = state.counter.value * payload.weight
 }
 
 const actions = {
@@ -21,7 +22,10 @@ const actions = {
   }) => commit('increment'),
   decrement: ({
     commit
-  }) => commit('decrement')
+  }) => commit('decrement'),
+  multiple: ({
+    commit
+  }) => commit('multiple')
 }
 
 const store = new Vuex.Store({
@@ -30,4 +34,15 @@ const store = new Vuex.Store({
   actions
 });
 
-mutationsSnapshooter(state, mutations);
+tester({
+  state,
+  mutations,
+  test: [{
+      type: 'increment'
+    },
+    {
+      type: 'multiple',
+      weight: 5
+    }
+  ]
+});
