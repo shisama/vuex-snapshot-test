@@ -1,6 +1,6 @@
 const Vue = require('vue');
 const Vuex = require('vuex');
-const tester = require('.');
+const tester = require('..');
 
 Vue.use(Vuex);
 
@@ -37,7 +37,7 @@ const store = new Vuex.Store({
 tester({
   state,
   mutations,
-  test: [{
+  tests: [{
       type: 'increment'
     },
     {

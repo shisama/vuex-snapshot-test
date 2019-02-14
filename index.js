@@ -4,7 +4,7 @@ const cloneDeep = require('lodash.clonedeep');
 module.exports = ({
   state,
   mutations,
-  test: tests,
+  tests = [],
 }) => {
   for (const {
       type,
@@ -15,11 +15,9 @@ module.exports = ({
       if (typeof mutation !== 'function') {
         throw new Error(`${type} is not a function.`);
       }
-      const initialState = cloneDeep(state);
       const mutableState = cloneDeep(state);
-      console.log(type, payload, mutableState);
       mutation(mutableState, payload);
-      expect(diff(initialState, mutableState)).toMatchSnapshot();
+      expect(diff(state, mutableState)).toMatchSnapshot();
     })
   }
 }
