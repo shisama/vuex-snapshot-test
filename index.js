@@ -17,7 +17,11 @@ module.exports = ({
       }
       const mutableState = cloneDeep(state);
       mutation(mutableState, payload);
-      expect(diff(state, mutableState)).toMatchSnapshot();
+      expect(diff(state, mutableState, {
+        expand: true,
+        aAnnotation: 'Before',
+        bAnnotation: 'After',
+      })).toMatchSnapshot();
     })
   }
 }

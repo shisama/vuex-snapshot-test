@@ -2,8 +2,8 @@
 
 exports[`increment 1`] = `
 "Snapshot Diff:
-- First value
-+ Second value
+- Before
++ After
 
   Object {
     \\"counter\\": Object {
@@ -15,8 +15,8 @@ exports[`increment 1`] = `
 
 exports[`multiple 1`] = `
 "Snapshot Diff:
-- First value
-+ Second value
+- Before
++ After
 
   Object {
     \\"counter\\": Object {
