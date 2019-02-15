@@ -25,7 +25,9 @@ const actions = {
   }) => commit('decrement'),
   multiple: ({
     commit
-  }) => commit('multiple')
+  }, weight) => commit('multiple', {
+    weight
+  })
 }
 
 const store = new Vuex.Store({
