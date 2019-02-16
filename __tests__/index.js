@@ -33,16 +33,32 @@ const store = new Vuex.Store({
   actions
 });
 
-tester({
-  state,
-  mutations,
-  tests: [
-    {
-      type: "increment"
-    },
-    {
-      type: "multiple",
-      weight: 5
-    }
-  ]
+describe("test vuex-snapshot-test", () => {
+  tester({
+    state,
+    mutations,
+    tests: [
+      {
+        type: "increment"
+      },
+      {
+        type: "multiple",
+        weight: 5
+      }
+    ]
+  });
+  tester({
+    store,
+    dispatches: [
+      dispatch => dispatch("increment"),
+      dispatch => dispatch("multiple", 5)
+    ]
+  });
+  tester({
+    store,
+    commits: [
+      commit => commit("increment"),
+      commit => commit("multiple", { weight: 5 })
+    ]
+  });
 });
