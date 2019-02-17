@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test vuex-snapshot-test increment 1`] = `
+exports[`test vuex-snapshot-test decrement 1`] = `
 "Snapshot Diff:
 - Before
 + After
@@ -8,7 +8,20 @@ exports[`test vuex-snapshot-test increment 1`] = `
   Object {
     \\"counter\\": Object {
 -     \\"value\\": 1,
-+     \\"value\\": 2,
++     \\"value\\": 0,
+    },
+  }"
+`;
+
+exports[`test vuex-snapshot-test increment 1`] = `
+"Snapshot Diff:
+- Before
++ After
+
+  Object {
+    \\"counter\\": Object {
+-     \\"value\\": 3,
++     \\"value\\": 4,
     },
   }"
 `;
@@ -46,8 +59,8 @@ exports[`test vuex-snapshot-test multiple 1`] = `
 
   Object {
     \\"counter\\": Object {
--     \\"value\\": 1,
-+     \\"value\\": 5,
+-     \\"value\\": 3,
++     \\"value\\": 15,
     },
   }"
 `;

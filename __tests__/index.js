@@ -35,7 +35,11 @@ const store = new Vuex.Store({
 
 describe("test vuex-snapshot-test", () => {
   tester({
-    state,
+    state: {
+      counter: {
+        value: 3
+      }
+    },
     mutations,
     tests: [
       {
@@ -58,6 +62,7 @@ describe("test vuex-snapshot-test", () => {
     store,
     commits: [
       commit => commit("increment"),
+      commit => commit("decrement"),
       commit => commit("multiple", { weight: 5 })
     ]
   });
