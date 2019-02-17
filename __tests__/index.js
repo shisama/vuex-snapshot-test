@@ -1,6 +1,6 @@
 const Vue = require("vue");
 const Vuex = require("vuex");
-const tester = require("..");
+const snapshot = require("..");
 
 Vue.use(Vuex);
 
@@ -13,17 +13,17 @@ const state = {
 const mutations = {
   increment: state => state.counter.value++,
   decrement: state => state.counter.value--,
-  multiple: (state, payload) => {
-    state.counter.value = state.counter.value * payload.weight;
+  multiply: (state, payload) => {
+    state.counter.value = state.counter.value * payload.num;
   }
 };
 
 const actions = {
   increment: ({ commit }) => commit("increment"),
   decrement: ({ commit }) => commit("decrement"),
-  multiple: ({ commit }, weight) =>
-    commit("multiple", {
-      weight
+  multiply: ({ commit }, num) =>
+    commit("multiply", {
+      num
     })
 };
 // eslint-disable-next-line no-unused-vars
@@ -33,32 +33,37 @@ const store = new Vuex.Store({
   actions
 });
 
-describe("test vuex-snapshot-test", () => {
-  tester({
-    state,
+describe("test", () => {
+  snapshot({
+    state: {
+      counter: {
+        value: 3
+      }
+    },
     mutations,
     tests: [
       {
         type: "increment"
       },
       {
-        type: "multiple",
-        weight: 5
+        type: "multiply",
+        num: 5
       }
     ]
   });
-  tester({
+  snapshot({
     store,
     dispatches: [
       dispatch => dispatch("increment"),
-      dispatch => dispatch("multiple", 5)
+      dispatch => dispatch("multiply", 5)
     ]
   });
-  tester({
+  snapshot({
     store,
     commits: [
       commit => commit("increment"),
-      commit => commit("multiple", { weight: 5 })
+      commit => commit("decrement"),
+      commit => commit("multiply", { num: 5 })
     ]
   });
 });
