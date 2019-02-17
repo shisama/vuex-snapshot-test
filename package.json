@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "Snapshot testing library for Vuex with Jest",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "jest"
   },
