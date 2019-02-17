@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`increment 1`] = `
+"Snapshot Diff:
+- Before
++ After
+
+  Object {
+    \\"counter\\": Object {
+-     \\"value\\": 1,
++     \\"value\\": 2,
+    },
+  }"
+`;
