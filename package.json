@@ -1,7 +1,7 @@
 {
   "name": "vuex-snapshot-test",
-  "version": "0.0.1",
-  "description": "Snapshot testing library for Vuex",
+  "version": "0.0.2",
+  "description": "Snapshot testing library for Vuex with Jest",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -15,7 +15,8 @@
     "vuex",
     "test",
     "snapshot",
-    "mutation",
+    "jest",
+    "actions",
     "mutations",
     "store"
   ],
