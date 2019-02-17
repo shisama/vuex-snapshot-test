@@ -52,7 +52,7 @@ exports[`test vuex-snapshot-test increment 3`] = `
   }"
 `;
 
-exports[`test vuex-snapshot-test multiple 1`] = `
+exports[`test vuex-snapshot-test multiply 1`] = `
 "Snapshot Diff:
 - Before
 + After
@@ -65,7 +65,7 @@ exports[`test vuex-snapshot-test multiple 1`] = `
   }"
 `;
 
-exports[`test vuex-snapshot-test multiple 2`] = `
+exports[`test vuex-snapshot-test multiply 2`] = `
 "Snapshot Diff:
 - Before
 + After
@@ -78,7 +78,7 @@ exports[`test vuex-snapshot-test multiple 2`] = `
   }"
 `;
 
-exports[`test vuex-snapshot-test multiple 3`] = `
+exports[`test vuex-snapshot-test multiply 3`] = `
 "Snapshot Diff:
 - Before
 + After
