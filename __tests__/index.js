@@ -1,6 +1,6 @@
 const Vue = require("vue");
 const Vuex = require("vuex");
-const tester = require("..");
+const snapshot = require("..");
 
 Vue.use(Vuex);
 
@@ -33,8 +33,8 @@ const store = new Vuex.Store({
   actions
 });
 
-describe("test vuex-snapshot-test", () => {
-  tester({
+describe("test", () => {
+  snapshot({
     state: {
       counter: {
         value: 3
@@ -51,14 +51,14 @@ describe("test vuex-snapshot-test", () => {
       }
     ]
   });
-  tester({
+  snapshot({
     store,
     dispatches: [
       dispatch => dispatch("increment"),
       dispatch => dispatch("multiply", 5)
     ]
   });
-  tester({
+  snapshot({
     store,
     commits: [
       commit => commit("increment"),
