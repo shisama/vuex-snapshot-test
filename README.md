@@ -48,6 +48,8 @@ yarn add --dev vuex-snapshot-test
 
 ## Usage
 
+Vuex Store
+
 ```js
 // store.js
 import Vue from "vue";
@@ -82,12 +84,16 @@ const store = new Vuex.Store({
   mutations,
   actions
 });
+```
 
+Test Code
+
+```js
 // store.test.js
 import snapshot from "vuex-snapshot-test";
 import store from "@/store";
 
-describe("test", () => {
+describe("test_describe", () => {
   // pass state, mutations, and tests parameters.
   snapshot({
     state: {
@@ -128,6 +134,102 @@ describe("test", () => {
 });
 
 ```
+
+Snapshot
+
+```diff
+exports[`test_describe decrement 1`] = `
+"Snapshot Diff:
+- Before
++ After
+
+  Object {
+    \\"counter\\": Object {
+-     \\"value\\": 1,
++     \\"value\\": 0,
+    },
+  }"
+`;
+
+exports[`test_describe increment 1`] = `
+"Snapshot Diff:
+- Before
++ After
+
+  Object {
+    \\"counter\\": Object {
+-     \\"value\\": 1,
++     \\"value\\": 2,
+    },
+  }"
+`;
+
+exports[`test_describe increment 2`] = `
+"Snapshot Diff:
+- Before
++ After
+
+  Object {
+    \\"counter\\": Object {
+-     \\"value\\": 1,
++     \\"value\\": 2,
+    },
+  }"
+`;
+
+exports[`test_describe increment 3`] = `
+"Snapshot Diff:
+- Before
++ After
+
+  Object {
+    \\"counter\\": Object {
+-     \\"value\\": 1,
++     \\"value\\": 2,
+    },
+  }"
+`;
+
+exports[`test_describe multiply 1`] = `
+"Snapshot Diff:
+- Before
++ After
+
+  Object {
+    \\"counter\\": Object {
+-     \\"value\\": 1,
++     \\"value\\": 5,
+    },
+  }"
+`;
+
+exports[`test_describe multiply 2`] = `
+"Snapshot Diff:
+- Before
++ After
+
+  Object {
+    \\"counter\\": Object {
+-     \\"value\\": 1,
++     \\"value\\": 5,
+    },
+  }"
+`;
+
+exports[`test_describe multiply 3`] = `
+"Snapshot Diff:
+- Before
++ After
+
+  Object {
+    \\"counter\\": Object {
+-     \\"value\\": 1,
++     \\"value\\": 5,
+    },
+  }"
+`;
+```
+
 
 ## Contributing
 Issues and Pull requests are welcome ;)
