@@ -7,7 +7,7 @@ Test Code
 
 ```js
 import snapshot from "vuex-snapshot-test";
-import store from "@/store";n
+import store from "@/store";
 
 snapshot({
   store, // state: 1
