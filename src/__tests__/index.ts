@@ -1,6 +1,6 @@
-const Vue = require("vue");
-const Vuex = require("vuex");
-const snapshot = require("..");
+import Vue from "vue";
+import Vuex, {Action} from "vuex";
+import snapshot from "../index";
 
 Vue.use(Vuex);
 
@@ -10,18 +10,24 @@ const state = {
   }
 };
 
+type State = typeof state;
+
+interface Action {
+  commit: Function;
+}
+
 const mutations = {
-  increment: state => state.counter.value++,
-  decrement: state => state.counter.value--,
-  multiply: (state, payload) => {
+  increment: (state: State) => state.counter.value++,
+  decrement: (state: State) => state.counter.value--,
+  multiply: (state: State, payload: {num: number}) => {
     state.counter.value = state.counter.value * payload.num;
   }
 };
 
 const actions = {
-  increment: ({ commit }) => commit("increment"),
-  decrement: ({ commit }) => commit("decrement"),
-  multiply: ({ commit }, num) =>
+  increment: ({ commit }: Action) => commit("increment"),
+  decrement: ({ commit }: Action) => commit("decrement"),
+  multiply: ({ commit }: Action, num: number) =>
     commit("multiply", {
       num
     })

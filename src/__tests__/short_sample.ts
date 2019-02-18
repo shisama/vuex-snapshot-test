@@ -1,6 +1,6 @@
-const Vue = require("vue");
-const Vuex = require("vuex");
-const snapshot = require("..");
+import Vue from "vue";
+import Vuex from "vuex";
+import snapshot from "../index";
 
 Vue.use(Vuex);
 
@@ -10,12 +10,18 @@ const state = {
   }
 };
 
+type State = typeof state;
+
+interface Action {
+  commit: Function;
+}
+
 const mutations = {
-  increment: state => state.counter.value++
+  increment: (state: State) => state.counter.value++
 };
 
 const actions = {
-  increment: ({ commit }) => commit("increment")
+  increment: ({ commit }: Action) => commit("increment")
 };
 // eslint-disable-next-line no-unused-vars
 const store = new Vuex.Store({

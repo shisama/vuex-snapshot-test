@@ -2,9 +2,10 @@
   "name": "vuex-snapshot-test",
   "version": "0.1.1",
   "description": "Snapshot testing library for Vuex with Jest",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
+    "build": "tsc",
     "test": "jest"
   },
   "repository": {
@@ -28,6 +29,8 @@
   },
   "homepage": "https://github.com/shisama/vuex-snapshot-test#readme",
   "devDependencies": {
+    "@types/jest": "^24.0.6",
+    "@types/lodash.clonedeep": "^4.5.5",
     "eslint": "5.14.0",
     "eslint-config-prettier": "4.0.0",
     "eslint-config-standard": "12.0.0",
@@ -39,8 +42,10 @@
     "eslint-plugin-standard": "4.0.0",
     "jest": "24.1.0",
     "prettier": "1.16.4",
-    "vue": "2.6.6",
-    "vuex": "3.1.0"
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.3.3",
+    "vue": "^2.6.6",
+    "vuex": "^3.1.0"
   },
   "dependencies": {
     "lodash.clonedeep": "^4.5.0",
