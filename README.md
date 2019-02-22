@@ -1,5 +1,6 @@
 # vuex-snapshot-test
 Snapshot testing library for Vuex.
+Inspired by [reducer-tester](https://github.com/akameco/reducer-tester)
 
 ## TL;DR
 
