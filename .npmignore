@@ -1,6 +1,8 @@
-__tests__
 .vscode
 node_modules
+src
 .eslintrc.js
 .gitignore
+jest.config.js
 renovate.json
+tsconfig.json
