@@ -1,5 +1,5 @@
 import Vue from "vue";
-import Vuex from "vuex";
+import Vuex, {ActionTree, MutationTree} from "vuex";
 import snapshot from "../index";
 
 Vue.use(Vuex);
@@ -12,16 +12,12 @@ const state = {
 
 type State = typeof state;
 
-interface Action {
-  commit: Function;
-}
-
-const mutations = {
+const mutations: MutationTree<State> = {
   increment: (state: State) => state.counter.value++
 };
 
-const actions = {
-  increment: ({ commit }: Action) => commit("increment")
+const actions: ActionTree<State, State> = {
+  increment: ({ commit }) => commit("increment")
 };
 // eslint-disable-next-line no-unused-vars
 const store = new Vuex.Store({
