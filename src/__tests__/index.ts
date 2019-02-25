@@ -1,5 +1,5 @@
 import Vue from "vue";
-import Vuex, {Action} from "vuex";
+import Vuex, {ActionTree, MutationTree} from "vuex";
 import snapshot from "../index";
 
 Vue.use(Vuex);
@@ -12,11 +12,7 @@ const state = {
 
 type State = typeof state;
 
-interface Action {
-  commit: Function;
-}
-
-const mutations = {
+const mutations: MutationTree<State> = {
   increment: (state: State) => state.counter.value++,
   decrement: (state: State) => state.counter.value--,
   multiply: (state: State, payload: {num: number}) => {
@@ -24,10 +20,10 @@ const mutations = {
   }
 };
 
-const actions = {
-  increment: ({ commit }: Action) => commit("increment"),
-  decrement: ({ commit }: Action) => commit("decrement"),
-  multiply: ({ commit }: Action, num: number) =>
+const actions: ActionTree<State, State> = {
+  increment: ({ commit }) => commit("increment"),
+  decrement: ({ commit }) => commit("decrement"),
+  multiply: ({ commit }, num: number) =>
     commit("multiply", {
       num
     })
