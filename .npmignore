@@ -1,8 +1,10 @@
 .vscode
+lib/__tests__
 node_modules
 src
 .eslintrc.js
 .gitignore
+.npmignore
 jest.config.js
 renovate.json
 tsconfig.json
