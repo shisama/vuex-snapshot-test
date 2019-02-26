@@ -1,5 +1,6 @@
 import Vue from "vue";
-import Vuex, {ActionTree, MutationTree} from "vuex";
+// eslint-disable-next-line no-unused-vars
+import Vuex, { ActionTree, MutationTree } from "vuex";
 import snapshot from "../index";
 
 Vue.use(Vuex);
@@ -15,7 +16,7 @@ type State = typeof state;
 const mutations: MutationTree<State> = {
   increment: (state: State) => state.counter.value++,
   decrement: (state: State) => state.counter.value--,
-  multiply: (state: State, payload: {num: number}) => {
+  multiply: (state: State, payload: { num: number }) => {
     state.counter.value = state.counter.value * payload.num;
   }
 };

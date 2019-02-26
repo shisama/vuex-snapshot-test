@@ -1,5 +1,6 @@
 import Vue from "vue";
-import Vuex, {ActionTree, MutationTree} from "vuex";
+// eslint-disable-next-line no-unused-vars
+import Vuex, { ActionTree, MutationTree } from "vuex";
 import snapshot from "../index";
 
 Vue.use(Vuex);
