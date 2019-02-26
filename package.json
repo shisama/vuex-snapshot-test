@@ -1,6 +1,6 @@
 {
   "name": "vuex-snapshot-test",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Snapshot testing library for Vuex with Jest",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
