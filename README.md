@@ -12,7 +12,7 @@ import snapshot from "vuex-snapshot-test";
 import store from "@/store";
 
 snapshot({
-  store, // state: 1
+  store, // state: 0
   dispatches: [dispatch => dispatch("increment")]
 });
 ```
@@ -27,8 +27,8 @@ exports[`increment 1`] = `
 
   Object {
     \\"counter\\": Object {
--     \\"value\\": 1,
-+     \\"value\\": 2,
+-     \\"value\\": 0,
++     \\"value\\": 1,
     },
   }"
 `;

@@ -7,8 +7,8 @@ exports[`increment 1`] = `
 
   Object {
     \\"counter\\": Object {
--     \\"value\\": 1,
-+     \\"value\\": 2,
+-     \\"value\\": 0,
++     \\"value\\": 1,
     },
   }"
 `;
