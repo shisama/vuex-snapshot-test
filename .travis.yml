@@ -8,3 +8,4 @@ os:
   - linux
 script:
   - npm test
+  - npm run lint
