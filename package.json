@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/shisama/vuex-snapshot-test#readme",
   "devDependencies": {
-    "@types/jest": "24.0.7",
+    "@types/jest": "24.0.8",
     "@types/lodash.clonedeep": "4.5.5",
     "eslint": "5.14.1",
     "eslint-config-prettier": "4.0.0",
