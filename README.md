@@ -1,5 +1,6 @@
 # vuex-snapshot-test
-[![Build Status](https://travis-ci.org/shisama/vuex-snapshot-test.svg?branch=master)](https://travis-ci.org/shisama/vuex-snapshot-test)  
+[![Build Status](https://travis-ci.org/shisama/vuex-snapshot-test.svg?branch=master)](https://travis-ci.org/shisama/vuex-snapshot-test) 
+[![npm version](https://badge.fury.io/js/vuex-snapshot-test.svg)](https://badge.fury.io/js/vuex-snapshot-test)  
 Snapshot testing library for Vuex.
 Inspired by [reducer-tester](https://github.com/akameco/reducer-tester).
 
